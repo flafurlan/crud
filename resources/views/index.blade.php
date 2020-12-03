@@ -7,10 +7,10 @@
     </h1>
     <hr>
     <div class="col-8 m-auto">
-    <table class="table">
+    <table class="table text-center">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">ID</th>
       <th scope="col">Título</th>
       <th scope="col">Cadastro</th>
       <th scope="col">Lançamneto</th>
