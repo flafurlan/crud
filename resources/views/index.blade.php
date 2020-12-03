@@ -1,15 +1,21 @@
 @extends('templates.template')
 @section('content')
-    <h1 class="text-center">Crud</h1>
+    <h1 class="text-center">- - Filmes assistidos - -
+        <a href="">
+            <button class="btn btn-success">Cadastrar novo</button>
+        </a>
+    </h1>
     <hr>
     <div class="col-8 m-auto">
     <table class="table">
   <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Título</th>
+      <th scope="col">Cadastro</th>
+      <th scope="col">Lançamneto</th>
+      <th scope="col">Duração</th>
+      <th scope="col">Ação CRUD</th>
     </tr>
   </thead>
   <tbody>
@@ -19,9 +25,10 @@
     @endphp
     <tr>
         <th scope="row">{{$movies->id}}</th>
-        <td>{{$movies->title}}</td>
+        <td>{{$movies->titulo}}</td>
         <td>{{$user->name}}</td>
         <td>{{$movies->ano_lançamento}}</td>
+        <td>{{$movies->tempo}}</td>
         <td>
             <a href="{{url("movies/$movies->id")}}">
                 <button class="btn btn-dark">Visualizar</button>
@@ -37,24 +44,6 @@
         </td>
     </tr>
     @endforeach
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
   </tbody>
 </table>
     </div>
