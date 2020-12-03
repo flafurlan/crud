@@ -2,8 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MovieController;
-
-
+use App\Models\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,5 +15,6 @@ use App\Http\Controllers\MovieController;
 */
 
 Route::get('/movies', [MovieController::class, 'index']);
+Route::get('/movies/{movies}','App\Http\Controllers\MovieController@show');
 
 
