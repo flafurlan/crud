@@ -20,7 +20,7 @@ class MovieController extends Controller
     public function index()
     {
          // return view("index");
-         dd($this->objUser->find(1)->relMovie);
+         dd($this->objUser->find(2)->relMovie);
     }
 
     /**
