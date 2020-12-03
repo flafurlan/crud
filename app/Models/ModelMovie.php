@@ -12,6 +12,6 @@ class ModelMovie extends Model
 
    public function relUsers()
     {
-        return $this->hasOne ('App\User','id','id_user');
+        return $this->hasOne ('App\Models\User','id','id_user');
     }
 }

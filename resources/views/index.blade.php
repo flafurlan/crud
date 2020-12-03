@@ -13,6 +13,30 @@
     </tr>
   </thead>
   <tbody>
+    @foreach($movie as $movies)
+    @php
+        $user=$movies->find($movies->id)->relUsers;
+    @endphp
+    <tr>
+        <th scope="row">{{$movies->id}}</th>
+        <td>{{$movies->title}}</td>
+        <td>{{$user->name}}</td>
+        <td>{{$movies->ano_lançamento}}</td>
+        <td>
+            <a href="{{url("movies/$movies->id")}}">
+                <button class="btn btn-dark">Visualizar</button>
+            </a>
+
+            <a href="">
+                <button class="btn btn-primary">Editar</button>
+            </a>
+
+            <a href="">
+                <button class="btn btn-danger">Deletar</button>
+            </a>
+        </td>
+    </tr>
+    @endforeach
     <tr>
       <th scope="row">1</th>
       <td>Mark</td>

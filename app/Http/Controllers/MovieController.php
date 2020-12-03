@@ -19,8 +19,8 @@ class MovieController extends Controller
 
     public function index()
     {
-         // return view("index");
-         dd($this->objUser->find(2)->relMovies);
+        $movie=$this->objMovie->all();
+        return view('index',compact('movie'));
     }
 
     /**
