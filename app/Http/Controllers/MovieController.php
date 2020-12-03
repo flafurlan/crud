@@ -52,7 +52,8 @@ class MovieController extends Controller
      */
     public function show($id)
     {
-        echo $id;
+        $movie=$this->objMovie->find($id);
+        return view('show',compact('movie'));
     }
 
     /**
