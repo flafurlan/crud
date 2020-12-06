@@ -16,5 +16,6 @@ use App\Models\User;
 
 Route::get('/movies', [MovieController::class, 'index']);
 Route::get('/movies/{movies}','App\Http\Controllers\MovieController@show');
+//Route::get('/movies/{movies}','App\Http\Controllers\MovieController@create');
 
 

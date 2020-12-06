@@ -9,9 +9,11 @@
         @endphp
         Título: {{$movie->titulo}}<br>
         Cadastrado por: {{$user->name}}<br>
-        Ano de lançamento: R$ {{$movie->ano_lançamento}}<br>
+        Ano de lançamento: {{$movie->ano_lançamento}}<br>
         Duração do filme: {{$movie->tempo}} <br>
         Email do usuario: {{$user->email}} <br>
     </div>
+
+    <h1 class="text-center">Voltar</h1> <hr>
 @endsection
 

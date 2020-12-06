@@ -2,6 +2,7 @@
 @section('content')
     <h1 class="text-center">- - Filmes assistidos - -
         <a href="">
+            <a href="{{url('movies/create')}}">
             <button class="btn btn-success">Cadastrar novo</button>
         </a>
     </h1>
