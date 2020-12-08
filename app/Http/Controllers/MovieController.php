@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ModelMovie;
 use App\Models\User;
+use App\View;
 
 class MovieController extends Controller
 {
@@ -31,7 +32,7 @@ class MovieController extends Controller
     public function create()
     {
         $users=$this->objUser->all();
-        return view('create',compact('users'));
+        return view('create');
     }
 
     /**
@@ -73,7 +74,9 @@ class MovieController extends Controller
      */
     public function edit($id)
     {
-        //
+        $movie=$this->objMovie->find($id);
+        $users=$this->objUser->all();
+        return view('create',compact('movie','users'));
     }
 
     /**

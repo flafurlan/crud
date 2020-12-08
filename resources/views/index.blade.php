@@ -1,8 +1,7 @@
 @extends('templates.template')
 @section('content')
     <h1 class="text-center">- - Filmes assistidos - -
-        <a href="">
-            <a href="{{url('movies/create')}}">
+        <a href="{{url('create')}}">
             <button class="btn btn-success">Cadastrar novo</button>
         </a>
     </h1>
@@ -35,7 +34,7 @@
                 <button class="btn btn-dark">Visualizar</button>
             </a>
 
-            <a href="">
+            <a href="{{url("movies/$movies->id/edit")}}">
                 <button class="btn btn-primary">Editar</button>
             </a>
 

@@ -13,7 +13,9 @@
         Duração do filme: {{$movie->tempo}} <br>
         Email do usuario: {{$user->email}} <br>
     </div>
-
-    <h1 class="text-center">Voltar</h1> <hr>
+    <a href="{{url('movies')}}">
+    <h1 class="text-center"> <button class="btn btn-success">
+        Retornar para pagina inicial</button></h1>
+    </a>
 @endsection
 

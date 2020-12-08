@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MovieController;
-use App\Models\User;
+use App\Resources\Views;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
