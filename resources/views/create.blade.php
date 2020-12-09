@@ -1,7 +1,7 @@
 @extends('templates.template')
 
 @section('content')
-    <h1 class="text-center">@if(isset($book)) Editar filme @else  Cadastrar novo filme @endif</h1> <hr>
+    <h1 class="text-center">@if(isset($movie)) Editar filme @else  Cadastrar novo filme @endif</h1> <hr>
 
     <div class="col-8 m-auto">
 

@@ -88,7 +88,13 @@ class MovieController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->objMovie->where(['id'=>$id])->update([
+            'titulo'=>$request->titulo,
+            'ano_lancamento'=>$request->ano_lancamento,
+            'tempo'=>$request->tempo,
+            'id_user'=>$request->id_user
+        ]);
+        return redirect('movies');
     }
 
     /**
