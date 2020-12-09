@@ -105,6 +105,7 @@ class MovieController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $del=$this->objMovie->destroy($id);
+        return($del)?"sim":"não";
     }
 }
