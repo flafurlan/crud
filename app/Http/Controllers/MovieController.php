@@ -20,7 +20,8 @@ class MovieController extends Controller
 
     public function index()
     {
-        $movie=$this->objMovie->all();
+        $movie=$this->objMovie->paginate(5);//quando uso paginate
+        //limita a quantidade de registro que a tela mostra, se usar all mostra todos
         return view('index',compact('movie'));
     }
 
