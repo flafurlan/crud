@@ -9,7 +9,7 @@
         @endphp
         Título: {{$movie->titulo}}<br>
         Cadastrado por: {{$user->name}}<br>
-        Ano de lançamento: {{$movie->ano_lançamento}}<br>
+        Ano de lançamento: {{$movie->ano_lancamento}}<br>
         Duração do filme: {{$movie->tempo}} <br>
         Email do usuario: {{$user->email}} <br>
     </div>

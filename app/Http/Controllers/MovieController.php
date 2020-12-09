@@ -32,7 +32,7 @@ class MovieController extends Controller
     public function create()
     {
         $users=$this->objUser->all();
-        return view('create');
+        return view('create',compact('users'));
     }
 
     /**
@@ -44,9 +44,9 @@ class MovieController extends Controller
     public function store(Request $request)
     {
         $cad=$this->objMovie->create([
-            'title'=>$request->titulo,
-            'pages'=>$request->ano_lançamento,
-            'price'=>$request->tempo,
+            'titulo'=>$request->titulo,
+            'ano_lancamento'=>$request->ano_lancamento,
+            'tempo'=>$request->tempo,
             'id_user'=>$request->id_user
          ]);
          if($cad){

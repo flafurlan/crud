@@ -9,6 +9,7 @@ class ModelMovie extends Model
 {
    // use HasFactory;
    protected $table='movie';
+   protected $fillable=['titulo','ano_lancamento','tempo','id_user'];
 
    public function relUsers()
     {

@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MovieController;
-use App\Resources\Views;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +14,8 @@ use App\Resources\Views;
 |
 */
 
-Route::get('/movies', [MovieController::class, 'index']);
-Route::get('/movies/{movies}','App\Http\Controllers\MovieController@show');
-//Route::get('/movies/{movies}','App\Http\Controllers\MovieController@create');
+Route::resource('/movies', MovieController::class);
+//Route::get('/movies/{movies}','App\Http\Controllers\MovieController@show');
+
 
 

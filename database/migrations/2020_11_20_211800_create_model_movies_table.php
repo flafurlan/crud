@@ -15,11 +15,11 @@ class CreateModelMoviesTable extends Migration
     {
 
         Schema::create('movie', function (Blueprint $table) {
-            $table->increments('id');
-            $table->Biginteger('id_user')->unsigned();
+            $table->id();
+            $table->unsignedBigInteger('id_user');
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->string('titulo');
-            $table->integer('ano_lançamento');
+            $table->integer('ano_lancamento');
             $table->double('tempo',10,2);
             $table->timestamps();
                });

@@ -1,7 +1,7 @@
 @extends('templates.template')
 @section('content')
     <h1 class="text-center">- - Filmes assistidos - -
-        <a href="{{url('create')}}">
+        <a href="{{url('movies/create')}}">
             <button class="btn btn-success">Cadastrar novo</button>
         </a>
     </h1>
@@ -27,7 +27,7 @@
         <th scope="row">{{$movies->id}}</th>
         <td>{{$movies->titulo}}</td>
         <td>{{$user->name}}</td>
-        <td>{{$movies->ano_lançamento}}</td>
+        <td>{{$movies->ano_lancamento}}</td>
         <td>{{$movies->tempo}}</td>
         <td>
             <a href="{{url("movies/$movies->id")}}">

@@ -8,12 +8,12 @@
             @csrf
             <input class="form-control" type="text" name="titulo" id="titulo" placeholder="Título:"><br>
             <select class="form-control" name="id_user" id="id_user">
-                <option value="">Nome do filme</option>
+                <option value="">Usuario</option>
                 @foreach($users as $user)
                     <option value="{{$user->id}}">{{$user->name}}</option>
                 @endforeach
             </select><br>
-            <input class="form-control" type="text" name="ano_lançamento" id="ano_lançamento" placeholder="Lançamento/Ano:"><br>
+            <input class="form-control" type="text" name="ano_lancamento" id="ano_lancamento" placeholder="Lançamento/Ano:"><br>
             <input class="form-control" type="text" name="tempo" id="tempo" placeholder="Duração:"><br>
             <input class="btn btn-primary" type="submit" value="Cadastrar">
         </form>
